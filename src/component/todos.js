@@ -9,6 +9,7 @@ import {
   Checkbox,
 } from "@mui/material";
 import AddTodo from "./AddTodo";
+import TodoListing from "./TodoListing";
 // 1. This component formats and returns the list of todos.
 // 2. Treat the question mark like an if statement.
 // If the todos array has items in the list [todos.length], we want to return the list
@@ -19,14 +20,13 @@ import AddTodo from "./AddTodo";
 const Todos = ({ todos }) => {
   const todoList = todos.length ? (
     todos.map((todo) => {
+      return <TodoListing leftText={todo.content} rightText="" />;
       return (
         <Grid key={todo.id}>
           <Card>
             {/* Remember, we set the local state of this todo item when the user submits the form in 
               AddTodo.js. All we need to do is return the todo list item */}
-            <CardContent>
-              {todo.content}
-            </CardContent>
+            <CardContent>{todo.content}</CardContent>
           </Card>
         </Grid>
       );
@@ -36,9 +36,8 @@ const Todos = ({ todos }) => {
   );
   // Lastly, return the todoList constant that we created above to show all of the items on the screen.
   return (
-    <div className="todoCollection" style={{ padding: "10px" }}>
-      {todoList}
-    </div>
+      todoList
+    
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AddTodo from "../component/AddTodo";
 import Todos from "../component/todos";
+import logo from "../assets/circlepfp.jpg";
 
 //Import hte home.css file
 import "./Home.css";
@@ -10,7 +11,7 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      todos: []
+      todos: [],
       // create your empty list here call it todos.
     };
   }
@@ -32,9 +33,43 @@ class Home extends Component {
   };
   render() {
     return (
-      <div className="Home">
-        <Todos todos={this.state.todos} />
-        {/* The AddTodo component is called here with the addTodo function passed as a prop */}
+      <div className="font-opensans h-screen flex flex-col">
+        <div className=" w-[100%] w-full h-[100px] flex flex-row justify-center">
+          <div className="w-[80%] flex flex-row justify-between items-center">
+            {/* this is the intro section */}
+            <div className="flex-col text-left">
+              <h1 className=" text-3xl font-normal">Hi Ibrahim</h1>
+              <h1 className="text-sm text-gray-500">
+                Keep maintaining the todolist :){" "}
+              </h1>
+            </div>
+
+            {/* this is the pfp section */}
+            <div className="flex justify-center">
+              <div className="h-[70px] w-[70px] rounded-full overflow-hidden">
+                <img
+                  src={logo}
+                  alt="Profile Picture"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="font-light mt-2 flex-grow flex flex-col items-center space-y-3 ">
+          <div className="px-4 text-white text-md justify-between flex flex-row w-[80%] bg-gradient-to-br from-purple-500 to-blue-500 h-[60px] rounded-2xl">
+            <div className="font-opensans h-full flex items-center ">Today</div>
+            <div className="h-full flex items-center">12 jan</div>
+          </div>
+          <h1 className="text-2xl font-semibold">To-do list</h1>
+
+          <Todos todos={this.state.todos} />
+        </div>
+        <div class="fixed bottom-4 right-4">
+          <button class="w-[75px] h-[75px] bg-gradient-to-br from-purple-500 to-blue-500 text-2xl text-white font-bold rounded-full shadow-lg">
+            +
+          </button>
+        </div>
         <AddTodo addTodo={this.addTodo} />
         <h1>Todo's </h1>
       </div>
