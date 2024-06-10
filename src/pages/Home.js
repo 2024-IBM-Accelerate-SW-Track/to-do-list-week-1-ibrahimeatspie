@@ -3,6 +3,8 @@ import AddTodo from "../component/AddTodo";
 import Todos from "../component/todos";
 import logo from "../assets/circlepfp.jpg";
 import AddListingButton from "../component/AddListingButton";
+import { Link } from "react-router-dom";
+
 //Import hte home.css file
 import "./Home.css";
 
@@ -42,10 +44,13 @@ class Home extends Component {
             <div className="w-[80%] flex flex-row justify-between items-center">
               {/* this is the intro section */}
               <div className="flex-col text-left">
-                <h1 className=" text-3xl font-normal">Hi Ibrahim</h1>
+                <h1 className=" text-3xl font-normal">Hi!</h1>
                 <h1 className="text-sm text-gray-500">
                   Keep maintaining the todolist :){" "}
                 </h1>
+                <Link to="/about">
+                  <button>About me</button>
+                </Link>
               </div>
 
               {/* this is the pfp section */}
