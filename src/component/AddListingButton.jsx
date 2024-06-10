@@ -18,7 +18,7 @@ const AddListingButton = ({ addTodo, prop2 }) => {
     }
   };
   return (
-    <div className="px-4 absolute bottom-10 flex items-center w-[100%] max-w-[750px] justify-center">
+    <div className="px-4 absolute  bottom-10 flex items-center w-[100%] max-w-[750px] justify-center">
       <TextField
         label="Enter new item"
         variant="outlined"
@@ -30,6 +30,7 @@ const AddListingButton = ({ addTodo, prop2 }) => {
           style: {
             height: "65px",
             borderRadius: "50px",
+            backgroundColor: "white",
           },
         }}
       />
