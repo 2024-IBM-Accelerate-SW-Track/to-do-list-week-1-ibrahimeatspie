@@ -3,12 +3,17 @@
 # Project Week 1: To-do list application
 
 ## What I created
-In the main branch, the code runs and passes the base test cases. However, I wanted to go above and beyond the basic to do list, and I created a full stack application completed with user authentication and a SQL DB, allowing users to sign into their todolist and save their tasks.
+In the main branch, the code runs and passes the base test cases. However, I wanted to go above and beyond the basic to do list, and I created a full stack application completed with user authentication and a SQL DB, allowing users to sign into their todolist and save their tasks. [Here is a video demoing it](https://www.loom.com/share/d619b070dc67489a98b372d19a0718b8?sid=9826272a-664e-4e33-a5a5-8b3097c44235)
 In order to access my above and beyond version:
 - Switch into the branch labeled "extra"
 - Open two terminals
 - In terminal one, CD into backend.
-- Create a .env [file](https://docs.google.com/document/d/1gNRbV7VC5jtnlj-vtFIxeptCg7fLmDR7TjA7tm7WLTg/edit?usp=sharing)
+- Create a .env [file](https://docs.google.com/document/d/1gNRbV7VC5jtnlj-vtFIxeptCg7fLmDR7TjA7tm7WLTg/edit?usp=sharing), just copy the text in the google doc
+- npm install by running npm i
+- then run the server by running npm run dev
+- in the other terminal, which is for the frontend, just run npm i
+- then run npm start to run the frontend
+- at this point you can now interact with the webapp!
 
 ## Introduction
 As a team, you should create and style the front-end of a to-do list web application using React and Material UI components. A typical user wants to be able to use a to-do list to organize tasks. Keeping user stories in mind when designing applications helps determine important features. We encourage you to take a unique approach to this lab as there is no one right answer. 
