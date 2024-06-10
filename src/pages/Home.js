@@ -8,6 +8,29 @@ import { useUser } from "@clerk/clerk-react";
 import { useAuth } from "@clerk/clerk-react";
 import { SignOutButton } from "@clerk/clerk-react";
 
+function formatDate(date) {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const day = date.getDate();
+  const monthIndex = date.getMonth();
+  const month = months[monthIndex];
+
+  return `${day} ${month}`;
+}
+
 const Home = () => {
   const [todos, setTodos] = useState([]);
   const { isSignedIn, user, isLoaded } = useUser();
@@ -54,6 +77,9 @@ const Home = () => {
     await fetchData();
   }, []);
 
+  const currentDate = new Date();
+  const formattedDate = formatDate(currentDate);
+
   return (
     <div className="font-opensans h-screen w-screen flex flex-col items-center">
       <div className="w-[100%] max-w-[750px]">
@@ -80,7 +106,7 @@ const Home = () => {
         <div className="font-light mt-2 flex-grow flex flex-col items-center space-y-3 ">
           <div className="px-4 text-white text-md justify-between flex flex-row w-[80%] bg-gradient-to-br from-purple-500 to-blue-500 h-[60px] rounded-2xl">
             <div className="font-opensans h-full flex items-center ">Today</div>
-            <div className="h-full flex items-center">12 jan</div>
+            <div className="h-full flex items-center">{formattedDate}</div>
           </div>
           <h1 className="text-2xl font-semibold">To-do list</h1>
           <div className="w-[100%] flex flex-col flex-grow items-center space-y-4">
