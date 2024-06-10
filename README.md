@@ -7,7 +7,8 @@ In the main branch, the code runs and passes the base test cases. However, I wan
 In order to access my above and beyond version:
 - Switch into the branch labeled "extra"
 - Open two terminals
-- In terminal one, CD into backend. 
+- In terminal one, CD into backend.
+- Create a .env [file](https://docs.google.com/document/d/1gNRbV7VC5jtnlj-vtFIxeptCg7fLmDR7TjA7tm7WLTg/edit?usp=sharing)
 
 ## Introduction
 As a team, you should create and style the front-end of a to-do list web application using React and Material UI components. A typical user wants to be able to use a to-do list to organize tasks. Keeping user stories in mind when designing applications helps determine important features. We encourage you to take a unique approach to this lab as there is no one right answer. 
